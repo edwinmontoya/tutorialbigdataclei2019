@@ -15,7 +15,7 @@
 1. Cargar los datos de los datasets de trabajo del tutorial en HDFS 
 2. Cada participante creara en hdfs un directorio 'datasets' en su 'home' (/user/<username>)
 3. En 'datasets' los archivos ya deben estar descomprimidos para ser procesables.
-4. Datasets: [DATASETS](../datasets)
+4. Datasets: [datasets](../datasets)
 
 ### Listar archivos HDFS
 
