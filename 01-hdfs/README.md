@@ -70,7 +70,7 @@ listar archivos:
     user@master$ hdfs dfs -ls /user/<username>/datasets
     user@master$ hdfs dfs -ls /user/<username>/datasets/gutenberg-small/
 
-### Copiar archivos de HDFS hacia el servidor local (gateway)
+### **Copiar archivos de HDFS hacia el servidor local (gateway)
 
     user@master$ hdfs dfs -get /user/<username>/datasets/gutenberg/gutenberg-small.zip ~<username>/mis_datasets/    (el directorio 'mis_datasets' debe estar creado)
 
@@ -100,17 +100,17 @@ comandos:
 
 # 3. GESTIÓN DE ARCHIVOS VÍA HUE
 
-## Login
+## ** Login
 
 ![login](hue-hdfs/hue-01-login.png)
 
 ![filemenu](hue-hdfs/hue-02-Files.png)
 
-## Explorar archivos
+## ** Explorar archivos
 
 ![explorar](hue-hdfs/hue-03-FileBrowser.png)
 
-## Crear un directorio
+## ** Crear un directorio
 
 ![Crear directorio](hue-hdfs/hue-04-FileNew.png)
 
@@ -118,7 +118,7 @@ comandos:
 
 ![Crear directorio](hue-hdfs/hue-06-FileNewDir2.png)
 
-## Subir (upload) archivos
+## ** Subir (upload) archivos
 
 ![Subir archivos](hue-hdfs/hue-07-FileUpload1.png)
 
@@ -128,6 +128,6 @@ comandos:
 
 ![Subir archivos](hue-hdfs/hue-10-FileBrowser.png)
 
-## Ver contenido de un archivo
+## ** Ver contenido de un archivo
 
 ![Ver archivo](hue-hdfs/hue-11-FileOpen.png)
