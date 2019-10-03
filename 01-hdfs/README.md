@@ -9,6 +9,7 @@
 ## Por Terminal:
 
         $ ssh -i ~/clei2019.pem hadoop@emr1.emontoya.ml
+        $ sudo su - <username-asignado>
 
 ## 2. GESTIÓN DE ARCHIVOS EN HDFS VÍA TERMINAL
 
@@ -21,14 +22,14 @@
 
 Para efectos de esta guia, es equivalente el comando "hadoop fs" y "hdfs dfs". La diferencia es que "hdfs dfs" es solo para sistemas de archivos HDFS, pero "hadoop fs" soporta otros adicionales como S3.
 
-    hadoop@master$ hdfs dfs -ls /
-    hadoop@master$ hdfs dfs -ls /user
-    hadoop@master$ hdfs dfs -ls /user/<username>
-    hadoop@master$ hdfs dfs -ls /datasets
+    user@master$ hdfs dfs -ls /
+    user@master$ hdfs dfs -ls /user
+    user@master$ hdfs dfs -ls /user/<username>
+    user@master$ hdfs dfs -ls /datasets
 
 ### Crear tu propio directorio de 'datasets' en HDFS
 
-    hadoop@master$ hdfs dfs -mkdir /user/<username>/datasets
+    user@master$ hdfs dfs -mkdir /user/<username>/datasets
 
 Nota: reemplace '<username>' por aca usuario asignado
 
@@ -38,41 +39,41 @@ Se asume que tiene los datos LOCALES se encuentran en /datasets en el gateway
 También están en este github, y por terminal debería copiarlos por SSH/SCP al servidor Gateway por la VPN.
 También están en Amazon S3:      s3://emontoyapublic/datasets
 
-    hadoop@master$ hdfs dfs -mkdir /user/<username>/datasets
-    hadoop@master$ hdfs dfs -mkdir /user/<username>/datasets/gutenberg-small
+    user@master$ hdfs dfs -mkdir /user/<username>/datasets
+    user@master$ hdfs dfs -mkdir /user/<username>/datasets/gutenberg-small
 
 * archivos locales FS en el emr-master:
 
-    hadoop@master$ hdfs dfs -put /datasets/gutenberg/gutenberg-small.zip /user/<username>/datasets/
+    user@master$ hdfs dfs -put /datasets/gutenberg/gutenberg-small.zip /user/<username>/datasets/
 
 * archivos en Amazon s3:
 
-    hadoop@master$ hadoop distcp s3://emontoyapublic/datasets/airlines.csv /tmp/
+    user@master$ hadoop distcp s3://emontoyapublic/datasets/airlines.csv /tmp/
 
 * copia recursiva de datos
     
-    hadoop@master$ hdfs dfs -copyFromLocal /datasets/* /user/<username>/datasets/
+    user@master$ hdfs dfs -copyFromLocal /datasets/* /user/<username>/datasets/
 
 listar archivos: 
 
-    hadoop@master$ hdfs dfs -ls /user/<username>/datasets
-    hadoop@master$ hdfs dfs -ls /user/<username>/datasets/gutenberg-small/
+    user@master$ hdfs dfs -ls /user/<username>/datasets
+    user@master$ hdfs dfs -ls /user/<username>/datasets/gutenberg-small/
 
 ### **Copiar archivos de HDFS hacia el servidor local (gateway)
 
-    hadoop@master$ hdfs dfs -get /user/<username>/datasets/gutenberg-small/* ~<username>/mis_datasets/    (el directorio 'mis_datasets' debe estar creado)
+    user@master$ hdfs dfs -get /user/<username>/datasets/gutenberg-small/* ~<username>/mis_datasets/    (el directorio 'mis_datasets' debe estar creado)
 
 otro comando para traer:
 
-    hadoop@master$ hdfs dfs -copyToLocal /user/<username>/datasets/gutenberg/gutenberg-small.zip ~<username>/mis_datasets/
+    user@master$ hdfs dfs -copyToLocal /user/<username>/datasets/gutenberg/gutenberg-small.zip ~<username>/mis_datasets/
 
-    hadoop@master$ ls -l mis_datasets
+    user@master$ ls -l mis_datasets
 
 ### Probar otros commandos
 
 Se aplica los siguientes comandos a:
 
-    hadoop@master$ hdfs dfs -<command>
+    user@master$ hdfs dfs -<command>
 
 comandos:
 
