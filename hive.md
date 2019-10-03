@@ -23,3 +23,7 @@ for (w, c) in output.take(10):
         print (w, c)
 output.coalesce(1).saveAsTextFile("/tmp/salida11")
 
+import-all-tables --connect jdbc:mysql://database-1.cj1yhistqein.us-east-2.rds.amazonaws.com:3306/retail_db --username=retail_dba --password=retail_dba --warehouse-dir=/tmp/retail_db -m 1 --mysql-delimiters
+
+
+import-all-tables --connect jdbc:mysql://database-1.cj1yhistqein.us-east-2.rds.amazonaws.com:3306/cursodb --username=curso --password=curso --warehouse-dir=/tmp/cursodb -m 1 --mysql-delimiters
