@@ -98,19 +98,19 @@ comandos:
     chown <username> files   cambiar el dueño de un archivo
     chgrp <group> files      cambiar el grupo de un archivo
 
-## 3. GESTIÓN DE ARCHIVOS VÍA HUE
+# 3. GESTIÓN DE ARCHIVOS VÍA HUE
 
-* Login
+## Login
 
 ![login](hue-hdfs/hue-01-login.png)
 
 ![filemenu](hue-hdfs/hue-02-Files.png)
 
-* explorar archivos
+## Explorar archivos
 
 ![explorar](hue-hdfs/hue-03-FileBrowser.png)
 
-* Crear un directorio
+## Crear un directorio
 
 ![Crear directorio](hue-hdfs/hue-04-FileNew.png)
 
@@ -118,7 +118,7 @@ comandos:
 
 ![Crear directorio](hue-hdfs/hue-06-FileNewDir2.png)
 
-* Subir (upload) archivos
+## Subir (upload) archivos
 
 ![Subir archivos](hue-hdfs/hue-07-FileUpload1.png)
 
@@ -128,6 +128,6 @@ comandos:
 
 ![Subir archivos](hue-hdfs/hue-10-FileBrowser.png)
 
-* Ver contenido de un archivo
+## Ver contenido de un archivo
 
 ![Ver archivo](hue-hdfs/hue-11-FileOpen.png)
