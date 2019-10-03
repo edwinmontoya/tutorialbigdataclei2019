@@ -116,15 +116,15 @@ comandos:
 
 ![Crear directorio](hue-hdfs/hue-05-FileNewDir1.png)
 
-![Crear directorio](hue-hdfs/hue-05-FileNewDir2.png)
+![Crear directorio](hue-hdfs/hue-06-FileNewDir2.png)
 
 * Subir (upload) archivos
 
 ![Subir archivos](hue-hdfs/hue-07-FileUpload1.png)
 
-![Subir archivos](hue-hdfs/hue-07-FileUpload2.png)
+![Subir archivos](hue-hdfs/hue-08-FileUpload2.png)
 
-![Subir archivos](hue-hdfs/hue-07-FileUpload3.png)
+![Subir archivos](hue-hdfs/hue-09-FileUpload3.png)
 
 ![Subir archivos](hue-hdfs/hue-10-FileBrowser.png)
 
